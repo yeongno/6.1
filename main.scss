@@ -1,19 +1,16 @@
-// 중첩된 속성
+//변수(Variables)
 
-.box{
-  font: {
-    weight: bold;
-    size: 10px;
-    family: sans-serif;
-  };
-  margin: {
-    top : 10px;
-    left: 20px;
-  };
-  padding: {
-    top: 10px;
-    bottom: 40px;
-    left: 20px;
-    right: 30px;
-  };
+$size: 100px;//let size = 100;
+
+.container{
+  // $size: 100px;여기서 선언을 하면 .container안에서만 사용 가능하다.
+  position: fixed;
+  top: $size;
+  .item{
+    $size: 100px;//let과 같이 재할당 가능
+    width: $size;
+    height: 100px;
+    transform: translateX(100px);
+  }
+  left:$size;
 }
