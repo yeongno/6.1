@@ -1,6 +1,13 @@
 $color: royalblue;
 .container{
-  h1 {
-    color: $color;
+  ul{
+    li{
+     .name{
+        color: royalblue;
+      }
+      .age{
+        color: orange;
+      }
+    }
   }
 }
