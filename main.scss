@@ -1,28 +1,10 @@
-// @mixin center{
-//   display: flex;
-//   justify-content:center;
-// }
-// .container {
-//   @include center;
-//   .item{
-//     @include center;
-//   }
-// }
-// .box{
-//   @include center;
-// }
+// for(let i = 0; i< 10; i+= 1){
+//   console.log(`loop-${i}`)
+// } 
+//js 에서의 반복문
 
-@mixin box($size: 100px, $color: tomato){
-  width: $size;
-  height: $size;
-  background-color: $color;
-}
-.container {
-@include box(200px, red);
-.item{
-  @include box($color: green);
-}
-}
-.box{
-@include box;
+@for $i from 1 through 10{
+  .box:nth-child(#{$i}){//css선택자를 쓰대 보간하는 방식을 써야함
+      width: 100px * $i;
+  }
 }
