@@ -1,18 +1,28 @@
-  .div{
-  $size:30px;
-  width: 20px + 20px;
-  height: 40px - 10px;
-  font-size: 10px * 2;
-  margin: (30px / 2);// 30px/2는 제대로 값이 출력 안됨
-  //margin: 10px + 12px/2;//다른 연산과 함께 사용시 그냥 연산 가능
-  // margin: $size / 2;//변수로 나누기 할시 소괄호 필요없음.
-  // margin: (30px / 2);// 30px/2는 제대로 값이 출력 안됨
-  
-  padding: 20px % 7;
+// @mixin center{
+//   display: flex;
+//   justify-content:center;
+// }
+// .container {
+//   @include center;
+//   .item{
+//     @include center;
+//   }
+// }
+// .box{
+//   @include center;
+// }
+
+@mixin box($size: 100px, $color: tomato){
+  width: $size;
+  height: $size;
+  background-color: $color;
 }
-.span{
-  font-size: 10px;
-  line-height: 10px;
-  font-family: serif;
-  font: 10px / 10px serif;//단축속성 사용 
+.container {
+@include box(200px, red);
+.item{
+  @include box($color: green);
+}
+}
+.box{
+@include box;
 }
