@@ -1,16 +1,14 @@
-@mixin center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@function ratio($size, $ratio){
-  @return $size * $ratio
-}
-
 .box{
-  $width: 100px;
-  width: $width;
-  height: ratio($width, 1/2);
-  @include center;
+  $color: royalblue;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: $color;
+  &:hover{
+    background-color: darken($color,10%);
+  }
+  &.built-in{
+    background-color: darken($color, 10%);
+  }
 }
