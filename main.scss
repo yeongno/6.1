@@ -11,8 +11,14 @@ r: royalblue,
 y: yellow
 );
 
-.box{
-    width: 100px;
-    color: red;
-    position: relative;
+@each $c in $list{
+    .box{
+        color: $c;
+    }
+}
+
+@each $k, $v in $map{
+    .box-#{$k}{
+        color: $v;
+    }
 }
