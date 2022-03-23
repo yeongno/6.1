@@ -1,14 +1,13 @@
-.box{
-  $color: royalblue;
-  width: 200px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: $color;
-  &:hover{
-    background-color: darken($color,10%);
-  }
-  &.built-in{
-    background-color: darken($color, 10%);
+// @import url("./sub.scss");
+// @import "./sub"; //url, 확장자 없이 가능
+@import "./sub", "./sub2";//두개도 가능
+
+
+
+$color: royalblue;
+
+.container{
+  h1{
+    color: $color;
   }
 }
